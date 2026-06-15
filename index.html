@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  cat > /mnt/user-data/outputs/standardpro-foot.html << 'HTMLEOF'
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>standardpro-foot - standardpro-foot.com</title>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --red:#c0392b;
+  --dark:#0d0d0d;
+  --dark2:#111111;
+  --dark3:#1a1a1a;
+  --gold:#e8b84b;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Open Sans',sans-serif;background:#111;color:#fff;overflow-x:hidden}
+
+/* TOPBAR */
+.topbar{background:#0d0d0d;padding:8px 40px;display:flex;justify-content:space-between;align-items:center;font-size:13px;color:#bbb;border-bottom:1px solid #1e1e1e}
+.topbar .hours span{margin-right:20px}
+.topbar .hours i{color:var(--red);margin-right:6px}
+.topbar-socials a{color:#bbb;margin-left:12px;font-size:14px;transition:color .3s;text-decoration:none}
+.topbar-socials a:hover{color:var(--red)}
+
+/* NAVBAR */
+nav{background:rgba(13,13,13,0.98);padding:0 40px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:999;border-bottom:2px solid var(--red)}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo img{width:58px;height:58px;object-fit:contain}
+.logo-text{color:#fff;font-family:'Oswald',sans-serif;font-size:16px;line-height:1.2}
+.logo-text span{color:var(--red)}
+.nav-links{display:flex;align-items:center;list-style:none}
+.nav-links>li{position:relative}
+.nav-links>li>a{color:#ddd;text-decoration:none;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:22px 15px;display:block;transition:color .3s}
+.nav-links>li>a:hover{color:var(--red)}
+.nav-links>li:hover .dropdown{display:block}
+.dropdown{display:none;position:absolute;top:100%;left:0;background:#0d0d0d;min-width:180px;border-top:2px solid var(--red);z-index:100}
+.dropdown a{display:block;padding:10px 18px;color:#ccc;text-decoration:none;font-size:12px;font-family:'Oswald',sans-serif;letter-spacing:1px;text-transform:uppercase;border-bottom:1px solid #1e1e1e;transition:background .3s,color .3s}
+.dropdown a:hover{background:var(--red);color:#fff}
+.nav-cta{background:var(--red) !important;color:#fff !important;padding:10px 20px !important;margin-left:10px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:1px;text-transform:uppercase;transition:background .3s !important}
+.nav-cta:hover{background:#a93226 !important}
+
+/* HERO */
+.hero{position:relative;min-height:92vh;display:flex;align-items:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:linear-gradient(rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.75) 100%),url('https://standardpro-foot.com/wp-content/uploads/2026/05/littleboyfootball-637x1024.webp') center/cover no-repeat;z-index:0}
+.hero-content{position:relative;z-index:1;padding:80px 40px;max-width:750px}
+.hero-eyebrow{color:var(--red);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+.hero-eyebrow::before{content:'';display:block;width:35px;height:2px;background:var(--red)}
+.hero h1{font-family:'Oswald',sans-serif;font-size:clamp(42px,6vw,80px);font-weight:700;line-height:1.05;text-transform:uppercase;color:#fff;margin-bottom:18px}
+.hero h1 span{color:var(--red)}
+.hero-sub{font-family:'Oswald',sans-serif;font-size:22px;color:var(--gold);letter-spacing:2px;margin-bottom:28px}
+.hero-coaches{display:flex;align-items:center;gap:14px;margin-bottom:28px}
+.hero-coaches .avatars{display:flex}
+.hero-coaches .avatars img{width:46px;height:46px;border-radius:50%;border:2px solid var(--red);object-fit:cover;margin-left:-10px}
+.hero-coaches .avatars img:first-child{margin-left:0}
+.hero-coaches-text{color:#ccc;font-size:13px;line-height:1.5}
+.hero-coaches-text strong{color:var(--gold);display:block;font-size:14px}
+.hero-desc{color:#bbb;font-size:15px;line-height:1.8;margin-bottom:34px;max-width:560px}
+.hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+.btn-red{background:var(--red);color:#fff;padding:14px 32px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:background .3s,transform .2s;display:inline-block}
+.btn-red:hover{background:#a93226;transform:translateY(-2px)}
+.btn-outline{border:2px solid rgba(255,255,255,0.7);color:#fff;padding:12px 30px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;display:inline-block}
+.btn-outline:hover{background:#fff;color:#000}
+
+/* STATS */
+.stats-bar{background:var(--red);padding:26px 40px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px;text-align:center}
+.stat-item{border-right:1px solid rgba(255,255,255,0.25);padding:4px 0}
+.stat-item:last-child{border-right:none}
+.stat-num{font-family:'Oswald',sans-serif;font-size:44px;font-weight:700;color:#fff;display:block;line-height:1}
+.stat-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.8);margin-top:4px}
+.stat-since{font-family:'Oswald',sans-serif;font-size:12px;color:rgba(255,255,255,0.5);margin-top:2px}
+
+/* SECTIONS */
+section{padding:90px 40px}
+.container{max-width:1200px;margin:0 auto}
+.section-eyebrow{color:var(--red);font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:3px;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px}
+.section-eyebrow::before{content:'';display:block;width:28px;height:2px;background:var(--red)}
+.section-eyebrow.center{justify-content:center}
+.section-eyebrow.center::before{display:none}
+.section-title{font-family:'Oswald',sans-serif;font-size:clamp(28px,4vw,44px);font-weight:700;text-transform:uppercase;color:#fff;margin-bottom:18px;line-height:1.1}
+.section-title span{color:var(--red)}
+.section-sub{color:#999;font-size:15px;line-height:1.8}
+
+/* ABOUT */
+.about{background:#111}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img-wrap{position:relative}
+.about-img-wrap img{width:100%;height:500px;object-fit:cover;display:block}
+.about-badge{position:absolute;bottom:-16px;right:-16px;background:var(--red);padding:18px 22px;text-align:center}
+.about-badge .yr{font-family:'Oswald',sans-serif;font-size:38px;color:#fff;line-height:1;display:block}
+.about-badge small{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,0.8)}
+.about-features{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:30px}
+.feat{background:#1a1a1a;padding:18px;border-left:3px solid var(--red);transition:transform .3s}
+.feat:hover{transform:translateY(-3px)}
+.feat i{color:var(--red);font-size:20px;margin-bottom:8px}
+.feat h4{font-family:'Oswald',sans-serif;font-size:14px;color:#fff;margin-bottom:4px;letter-spacing:.5px}
+.feat p{font-size:12px;color:#777;line-height:1.5}
+
+/* VIDEO */
+.video-wrap{position:relative;padding-bottom:45%;height:0;overflow:hidden}
+.video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}
+
+/* PROGRAMS */
+.programs{background:#1a1a1a}
+.prog-header{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:44px;flex-wrap:wrap;gap:20px}
+.prog-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px}
+.prog-card{background:#111;padding:34px 24px;position:relative;overflow:hidden;transition:background .3s;cursor:pointer}
+.prog-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--red);transform:scaleX(0);transition:transform .3s}
+.prog-card:hover{background:#161616}
+.prog-card:hover::after{transform:scaleX(1)}
+.prog-num{font-family:'Oswald',sans-serif;font-size:64px;font-weight:700;color:rgba(192,57,43,0.1);line-height:1;margin-bottom:14px}
+.prog-card h3{font-family:'Oswald',sans-serif;font-size:16px;color:#fff;margin-bottom:14px;letter-spacing:.5px;text-transform:uppercase}
+.prog-card ul{list-style:none}
+.prog-card ul li{color:#777;font-size:13px;padding:4px 0;border-bottom:1px solid #1e1e1e}
+.prog-card ul li::before{content:'→ ';color:var(--red)}
+.prog-card a{display:inline-block;margin-top:16px;color:var(--red);font-family:'Oswald',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;text-decoration:none}
+.prog-card a:hover{color:#fff}
+
+/* DETECTION CTA */
+.det-cta{background:var(--red);padding:60px 40px;text-align:center}
+.det-cta h2{font-family:'Oswald',sans-serif;font-size:34px;color:#fff;margin-bottom:14px;text-transform:uppercase}
+.det-cta p{color:rgba(255,255,255,0.85);max-width:520px;margin:0 auto 26px;font-size:14px}
+.btn-white{background:#fff;color:var(--red);padding:13px 30px;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;text-decoration:none;transition:all .3s;display:inline-block}
+.btn-white:hover{background:#0d0d0d;color:#fff}
+
+/* PERFORMANCE */
+.perf{background:#111}
+.perf-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.bar-item{margin-bottom:22px}
+.bar-label{display:flex;justify-content:space-between;color:#ccc;font-size:13px;margin-bottom:8px}
+.bar-label span{color:var(--gold);font-family:'Oswald',sans-serif}
+.bar-track{background:#222;height:5px}
+.bar-fill{height:100%;background:var(--red)}
+.perf-stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.pstat{text-align:center}
+.pstat .n{font-family:'Oswald',sans-serif;font-size:34px;color:var(--red);display:block}
+.pstat p{font-size:11px;color:#666;letter-spacing:1px;text-transform:uppercase;margin-top:4px}
+
+/* TEAM */
+.team{background:#1a1a1a}
+.team-hdr{text-align:center;margin-bottom:46px}
+.team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.team-card{position:relative;overflow:hidden;cursor:pointer}
+.team-card img{width:100%;height:380px;object-fit:cover;object-position:top;display:block;filter:grayscale(20%);transition:filter .4s,transform .4s}
+.team-card:hover img{filter:grayscale(0);transform:scale(1.04)}
+.team-info{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(transparent,rgba(0,0,0,0.93));padding:44px 22px 22px;transform:translateY(50px);transition:transform .35s}
+.team-card:hover .team-info{transform:translateY(0)}
+.team-info .role{color:var(--red);font-size:11px;letter-spacing:2px;text-transform:uppercase;margin-bottom:4px}
+.team-info h3{font-family:'Oswald',sans-serif;font-size:20px;color:#fff;margin-bottom:4px}
+.team-info .lic{color:var(--gold);font-size:13px;margin:3px 0}
+.team-info .exp{color:#999;font-size:12px}
+.team-socials{margin-top:10px}
+.team-socials a{color:#777;margin-right:10px;font-size:13px;text-decoration:none;transition:color .3s}
+.team-socials a:hover{color:var(--red)}
+
+/* TESTIMONIALS */
+.testi{background:#0d0d0d}
+.testi-hdr{text-align:center;margin-bottom:46px}
+.testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi-card{background:#1a1a1a;padding:30px;border-top:3px solid var(--red)}
+.testi-q{font-size:52px;color:var(--red);line-height:.7;margin-bottom:14px;font-family:Georgia,serif;opacity:.5}
+.testi-text{color:#bbb;font-size:14px;line-height:1.8;margin-bottom:22px;font-style:italic}
+.testi-author{display:flex;align-items:center;gap:12px}
+.testi-author img{width:52px;height:52px;border-radius:50%;object-fit:cover;object-position:top;border:2px solid var(--red)}
+.testi-name{font-family:'Oswald',sans-serif;color:#fff;font-size:16px}
+.testi-role{color:#666;font-size:11px;letter-spacing:1px}
+
+/* MATCHES */
+.matches{background:#111}
+.matches-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:36px;flex-wrap:wrap;gap:14px}
+.match-list{display:flex;flex-direction:column;gap:2px}
+.match-item{background:#1a1a1a;display:grid;grid-template-columns:130px 1fr auto 1fr 90px;align-items:center;padding:20px 28px;gap:20px;transition:background .3s}
+.match-item:hover{background:#222}
+.match-date .time{font-family:'Oswald',sans-serif;font-size:18px;color:var(--red);display:block;text-align:center}
+.match-date .day{font-size:11px;color:#555;letter-spacing:1px;text-transform:uppercase;text-align:center}
+.match-team{display:flex;align-items:center;gap:14px}
+.match-team.right{flex-direction:row-reverse;justify-content:flex-end}
+.match-team img{width:36px;height:36px;object-fit:contain}
+.match-team h4{font-family:'Oswald',sans-serif;font-size:16px;color:#fff}
+.match-vs{text-align:center;font-family:'Oswald',sans-serif;font-size:22px;color:var(--red)}
+.match-badge{text-align:center}
+.match-badge span{background:var(--red);color:#fff;padding:4px 12px;font-size:10px;letter-spacing:1px;text-transform:uppercase;font-family:'Oswald',sans-serif}
+
+/* FAQ */
+.faq{background:#1a1a1a}
+.faq-grid{display:grid;grid-template-columns:1fr 2fr;gap:56px;align-items:start}
+.faq-cta{background:var(--red);padding:34px}
+.faq-cta h3{font-family:'Oswald',sans-serif;font-size:20px;color:#fff;margin-bottom:12px;text-transform:uppercase}
+.faq-cta p{color:rgba(255,255,255,.85);font-size:13px;line-height:1.7;margin-bottom:22px}
+.faq-list{display:flex;flex-direction:column;gap:2px}
+.faq-item{background:#111}
+.faq-q{display:flex;justify-content:space-between;align-items:center;padding:18px 22px;cursor:pointer;color:#fff;font-family:'Oswald',sans-serif;font-size:15px;transition:background .3s}
+.faq-q:hover{background:#161616}
+.faq-q i{color:var(--red);transition:transform .3s;flex-shrink:0}
+.faq-item.open .faq-q i{transform:rotate(45deg)}
+.faq-a{display:none;padding:0 22px 18px;color:#888;font-size:13px;line-height:1.8}
+.faq-a ul{margin-top:8px;padding-left:16px}
+.faq-a ul li{margin-bottom:4px}
+.faq-item.open .faq-a{display:block}
+
+/* NEWS */
+.news{background:#111}
+.news-hdr{text-align:center;margin-bottom:46px}
+.news-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px}
+.news-card{background:#1a1a1a;overflow:hidden;transition:transform .3s;cursor:pointer}
+.news-card:hover{transform:translateY(-5px)}
+.news-card img{width:100%;height:220px;object-fit:cover;display:block;transition:transform .4s}
+.news-card:hover img{transform:scale(1.05)}
+.news-body{padding:22px}
+.news-tag{background:var(--red);color:#fff;font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:3px 10px;font-family:'Oswald',sans-serif;display:inline-block;margin-bottom:10px}
+.news-body h3{font-family:'Oswald',sans-serif;font-size:17px;color:#fff;margin-bottom:8px;line-height:1.3}
+.news-body p{color:#777;font-size:13px;line-height:1.7;margin-bottom:14px}
+.news-body a{color:var(--red);font-size:11px;letter-spacing:2px;text-transform:uppercase;font-family:'Oswald',sans-serif;text-decoration:none}
+.news-body a:hover{color:#fff}
+
+/* CONTACT */
+.contact{background:#0d0d0d}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px}
+.contact-info h3{font-family:'Oswald',sans-serif;font-size:14px;color:var(--red);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.contact-info p{color:#999;font-size:15px;margin-bottom:26px}
+.soc-row{margin-top:24px}
+.soc-row h4{font-family:'Oswald',sans-serif;color:#fff;margin-bottom:12px;font-size:13px;letter-spacing:1px;text-transform:uppercase}
+.soc-row a{display:inline-flex;align-items:center;justify-content:center;width:36px;height:36px;background:#1a1a1a;color:#777;margin-right:6px;font-size:14px;transition:all .3s;text-decoration:none}
+.soc-row a:hover{background:var(--red);color:#fff}
+.contact-form input,.contact-form textarea{width:100%;background:#1a1a1a;border:1px solid #222;color:#fff;padding:13px 15px;font-size:13px;font-family:'Open Sans',sans-serif;margin-bottom:14px;outline:none;transition:border-color .3s}
+.contact-form input:focus,.contact-form textarea:focus{border-color:var(--red)}
+.contact-form textarea{height:130px;resize:none}
+.contact-form button{background:var(--red);color:#fff;padding:13px 34px;border:none;font-family:'Oswald',sans-serif;font-size:13px;letter-spacing:2px;text-transform:uppercase;cursor:pointer;width:100%;transition:background .3s}
+.contact-form button:hover{background:#a93226}
+
+/* NEWSLETTER */
+.newsletter{background:#111;padding:40px;border-top:1px solid #1a1a1a}
+.newsletter-inner{max-width:560px;margin:0 auto;text-align:center}
+.newsletter-inner h3{font-family:'Oswald',sans-serif;color:#fff;font-size:20px;margin-bottom:18px;text-transform:uppercase}
+.nl-form{display:flex}
+.nl-form input{flex:1;background:#1a1a1a;border:1px solid #2a2a2a;border-right:none;color:#fff;padding:13px 16px;font-size:13px;outline:none}
+.nl-form button{background:var(--red);color:#fff;border:none;padding:13px 22px;font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;cursor:pointer}
+
+/* PARTNERS */
+.partners{background:#0a0a0a;padding:28px 40px;text-align:center;border-top:1px solid #181818}
+.partners h4{font-family:'Oswald',sans-serif;font-size:12px;letter-spacing:3px;color:#333;text-transform:uppercase;margin-bottom:18px}
+.partners-logos{display:flex;justify-content:center;align-items:center;gap:36px;flex-wrap:wrap}
+.partner-logo img{width:80px;height:80px;object-fit:contain;filter:grayscale(80%) brightness(0.6);transition:all .3s;cursor:pointer}
+.partner-logo img:hover{filter:grayscale(0) brightness(1)}
+
+/* FOOTER */
+footer{background:#080808;border-top:2px solid #181818}
+.footer-top{display:grid;grid-template-columns:2fr 1fr 1fr 1.5fr;gap:46px;padding:66px 40px 46px;max-width:1200px;margin:0 auto}
+.footer-brand p{color:#555;font-size:13px;line-height:1.8;margin:14px 0 22px}
+.footer-soc a{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:#161616;color:#555;margin-right:5px;font-size:13px;transition:all .3s;text-decoration:none}
+.footer-soc a:hover{background:var(--red);color:#fff}
+footer h4{font-family:'Oswald',sans-serif;font-size:14px;color:#fff;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px;padding-bottom:8px;border-bottom:1px solid #1a1a1a}
+footer ul{list-style:none}
+footer ul li{margin-bottom:9px}
+footer ul li a{color:#555;text-decoration:none;font-size:13px;transition:color .3s;padding-left:0}
+footer ul li a:hover{color:var(--red);padding-left:4px}
+.footer-bottom{background:#040404;padding:16px 40px;text-align:center;color:#333;font-size:12px;letter-spacing:.5px;border-top:1px solid #111}
+.footer-bottom a{color:var(--red);text-decoration:none}
+
+@media(max-width:1024px){
+  .prog-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-top{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  nav{padding:0 16px}
+  .nav-links{display:none}
+  .hero-content{padding:50px 20px}
+  .stats-bar{grid-template-columns:repeat(2,1fr)}
+  section{padding:60px 20px}
+  .about-grid,.perf-grid,.contact-grid,.faq-grid{grid-template-columns:1fr}
+  .prog-grid,.team-grid,.testi-grid,.news-grid{grid-template-columns:1fr}
+  .match-item{grid-template-columns:1fr;text-align:center;gap:8px}
+  .footer-top{grid-template-columns:1fr;padding:36px 20px}
+  .footer-bottom{padding:14px 20px}
+  .topbar{display:none}
+}
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="hours">
+    <span><i class="fas fa-clock"></i> Lun – Ven : 8H:30 – 17H:30</span>
+    <span><i class="fas fa-clock"></i> Sam - Dim : 9H – 15H:30</span>
+  </div>
+  <div class="topbar-socials">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-x-twitter"></i></a>
+    <a href="#"><i class="fab fa-pinterest-p"></i></a>
+    <a href="#"><i class="fab fa-telegram-plane"></i></a>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav>
+  <a href="#" class="logo">
+    <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/ChatGPT_Image_30_avr._2026__20_43_24-removebg-preview-300x300.png" alt="Logo Standard Pro-Foot">
+    <div class="logo-text">STANDARD<br><span>PRO-FOOT</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#">Accueil</a></li>
+    <li><a href="#">L'Equipe</a></li>
+    <li>
+      <a href="#">Programmes ▾</a>
+      <div class="dropdown">
+        <a href="#">U13</a>
+        <a href="#">U14 – U15</a>
+        <a href="#">U16 – U17</a>
+        <a href="#">U18 – U19</a>
+      </div>
+    </li>
+    <li>
+      <a href="#">Univers ▾</a>
+      <div class="dropdown">
+        <a href="#">Actualités</a>
+        <a href="#">Calendrier</a>
+        <a href="#">FAQ</a>
+      </div>
+    </li>
+    <li><a href="#">Contactez Nous</a></li>
+    <li><a href="#" class="nav-cta">Prendre Rdv</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">la discipline, l'excellence et la passion au service du football moderne</div>
+    <h1>FORMER AUJOURD'HUI,<br><span>BRILLER DEMAIN !</span></h1>
+    <div class="hero-sub">Coachs Professionnels</div>
+    <div class="hero-coaches">
+      <div class="avatars">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/testi-5-rmib53b9uh3la4pgxtfcx2z8ncx9nkdg1hwwps0v6u.webp" alt="Coach">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/Seidou-rnlpbi9zddooatq7qbcdrhdmjff25c0wzze5sjnnfc.jpeg" alt="Seidou">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/babacar-rnlptv2itwt90p2djqz3ycmo5ay3gjw7uu0i62fvx4.jpeg" alt="Babacar">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/ChatGPT-Image-12-mai-2026-00_57_59-rnbqr79qwd6rmxrg64n3qcjy6gtbapy2lsuz74xhzs.png" alt="Coach chef">
+      </div>
+      <div class="hero-coaches-text">
+        <strong>Encadrement d'élite</strong>
+        Le football se construit collectivement.
+      </div>
+    </div>
+    <p class="hero-desc">Les grands parcours naissent de l'effort, du sacrifice et de la détermination. Standard Pro-Foot ambitionne de devenir une passerelle entre le football local et les opportunités internationales.</p>
+    <div class="hero-btns">
+      <a href="#" class="btn-red">Explorer les Services</a>
+      <a href="#" class="btn-outline">Nous Contacter</a>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item">
+    <span class="stat-num counter" data-target="120">0</span>
+    <div class="stat-label">Joueurs</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num counter" data-target="20">0</span>
+    <div class="stat-label">Tournois Gagnés</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num counter" data-target="85">0</span>
+    <div class="stat-label">Matches Joués</div>
+  </div>
+  <div class="stat-item">
+    <span class="stat-num counter" data-target="12">0</span>
+    <div class="stat-label">Contrats Signés</div>
+    <div class="stat-since">Since 2025</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section class="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-img-wrap">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/ChatGPT-Image-12-mai-2026-00_57_59-rnbqr79qu68y21crg6ljmjm14llqd4sab7mpw2emzq.png" alt="Coach en chef">
+        <div class="about-badge">
+          <span class="yr">2025</span>
+          <small>Fondée</small>
+        </div>
+      </div>
+      <div>
+        <div class="section-eyebrow">A Propos</div>
+        <h2 class="section-title">Construire le football de demain, <span>Aujourd'hui !</span></h2>
+        <p class="section-sub">La Standard Pro-Foot ambitionne de devenir une référence dans la formation des jeunes footballeurs en Afrique de l'Ouest et bâtir une nouvelle génération de joueurs capables de représenter fièrement leur pays sur les plus grandes scènes du football.</p>
+        <div style="margin-top:18px;color:#888;font-size:14px;line-height:1.8">
+          <p><strong style="color:var(--gold)">Coach en chef :</strong> (+227) 77-123-45-67</p>
+          <p style="margin-top:10px"><strong style="color:var(--gold)">Notre Vision :</strong> Former et accompagner les jeunes talents en leur offrant un encadrement sportif, éducatif et humain capable de les préparer au football de haut niveau.</p>
+          <p style="margin-top:10px"><strong style="color:var(--gold)">Notre Mission :</strong> Devenir une académie de référence en Afrique et dans le monde dans la formation des futurs talents du football professionnel de haut niveau.</p>
+        </div>
+        <div class="about-features">
+          <div class="feat"><i class="fas fa-graduation-cap"></i><h4>Accompagnement Éducatif</h4><p>Suivi du comportement, discipline et performances scolaires.</p></div>
+          <div class="feat"><i class="fas fa-campground"></i><h4>Stages Intensifs</h4><p>Vacances, présaisons et périodes de détection.</p></div>
+          <div class="feat"><i class="fas fa-handshake"></i><h4>Orientation & Opportunités</h4><p>Recruteurs, académies partenaires, clubs étrangers.</p></div>
+          <div class="feat"><i class="fas fa-trophy"></i><h4>Compétitions & Tournois</h4><p>Championnats locaux, tournois jeunes, détections.</p></div>
+        </div>
+        <div style="margin-top:28px"><a href="#" class="btn-red">Nous Contacter</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<div style="background:#0d0d0d">
+  <div class="video-wrap">
+    <iframe src="https://www.youtube.com/embed/VhBl3dHT5SY?controls=0&mute=1" allowfullscreen></iframe>
+  </div>
+</div>
+
+<!-- PROGRAMS -->
+<section class="programs">
+  <div class="container">
+    <div class="prog-header">
+      <div>
+        <div class="section-eyebrow">Nos Programmes</div>
+        <h2 class="section-title">Nous cultivons <span>l'Excellence</span></h2>
+        <p class="section-sub">Les grands parcours naissent du respect, de l'effort, du sacrifice et de la détermination.</p>
+      </div>
+      <a href="#" class="btn-red">S'entraîner avec nous</a>
+    </div>
+    <div class="prog-grid">
+      <div class="prog-card">
+        <div class="prog-num">01</div>
+        <h3>Fondamentaux du Football</h3>
+        <ul>
+          <li>Contrôle de balle</li>
+          <li>Passes & dribbles</li>
+          <li>Finition</li>
+          <li>Jeu collectif</li>
+        </ul>
+        <a href="#">Lire Plus →</a>
+      </div>
+      <div class="prog-card">
+        <div class="prog-num">02</div>
+        <h3>Football Moderne (Tactique)</h3>
+        <ul>
+          <li>Lecture du jeu</li>
+          <li>Placement & transitions</li>
+          <li>Pressing</li>
+          <li>Intelligence collective</li>
+        </ul>
+        <a href="#">Lire Plus →</a>
+      </div>
+      <div class="prog-card">
+        <div class="prog-num">03</div>
+        <h3>Séances pour Gardiens</h3>
+        <ul>
+          <li>Réflexes & sorties aériennes</li>
+          <li>Jeu au pied</li>
+          <li>Positionnement</li>
+          <li>Relances</li>
+        </ul>
+        <a href="#">Lire Plus →</a>
+      </div>
+      <div class="prog-card">
+        <div class="prog-num">04</div>
+        <h3>Stages Intensifs & Camps</h3>
+        <ul>
+          <li>Vacances</li>
+          <li>Présaisons</li>
+          <li>Périodes de détection</li>
+        </ul>
+        <a href="#">Lire Plus →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DETECTION CTA -->
+<div class="det-cta">
+  <div class="container">
+    <h2>Détection et Développement des Talents</h2>
+    <p>Identification des jeunes joueurs à fort potentiel avec accompagnement personnalisé.</p>
+    <a href="#" class="btn-white">Voir tous nos programmes</a>
+  </div>
+</div>
+
+<!-- PERFORMANCE -->
+<section class="perf">
+  <div class="container">
+    <div class="perf-grid">
+      <div>
+        <div class="section-eyebrow">Le renouveau du football Africain</div>
+        <h2 class="section-title">Un système approuvé pour développer <span>ton potentiel</span></h2>
+        <p class="section-sub">A travers l'encadrement des joueurs et le suivi de leur comportement, discipline et performances scolaires et athlétiques.</p>
+        <div style="margin-top:28px">
+          <div class="bar-item">
+            <div class="bar-label">Taux de Réussite Académique <span>92%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:92%"></div></div>
+          </div>
+          <div class="bar-item">
+            <div class="bar-label">Taux de Réussite Footballistique <span>88%</span></div>
+            <div class="bar-track"><div class="bar-fill" style="width:88%"></div></div>
+          </div>
+        </div>
+        <div class="perf-stats-row">
+          <div class="pstat"><span class="n">20+</span><p>Match & Tournois</p></div>
+          <div class="pstat"><span class="n">99%</span><p>Joueurs Satisfaits</p></div>
+          <div class="pstat"><span class="n">10+</span><p>Partenaires Int.</p></div>
+        </div>
+      </div>
+      <div style="position:relative">
+        <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/littleboyfootball-637x1024.webp" alt="Jeune footballeur" style="width:100%;height:520px;object-fit:cover;display:block;object-position:center top">
+        <div style="position:absolute;bottom:28px;left:28px;background:var(--red);padding:18px 24px">
+          <div style="font-family:'Oswald',sans-serif;font-size:40px;color:#fff;font-weight:700;line-height:1">15+</div>
+          <div style="font-size:10px;letter-spacing:2px;color:rgba(255,255,255,.8);text-transform:uppercase">Championnats</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team">
+  <div class="container">
+    <div class="team-hdr">
+      <div class="section-eyebrow center">L'Equipe</div>
+      <h2 class="section-title">L'Equipe de Tous les <span>Possibles</span></h2>
+      <p class="section-sub" style="margin:0 auto;max-width:500px">Des professionnels dédiés à l'excellence et au développement des jeunes talents.</p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/WhatsApp-Image-2026-05-04-at-23.47.11-rnbw51jntl15k7uy2rjs2299bbm0rqswzfepvfwox8.jpeg" alt="Mr Maifada">
+        <div class="team-info">
+          <div class="role">Président & CEO</div>
+          <h3>Mr Maifada</h3>
+          <div style="color:#aaa;font-size:12px">CEO Standard Pro-foot</div>
+          <div class="exp">Annee d'Exp: +16</div>
+          <div class="team-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/Seidou-rnlpbia2wk6bz1e1j5urw40vjpms9fci26p5mm1lik.jpeg" alt="El Hadj Seidou">
+        <div class="team-info">
+          <div class="role">Entraîneur Principal</div>
+          <h3>El Hadj Seidou</h3>
+          <div class="lic">Licence B CAF</div>
+          <div class="exp">Annee d'Exp: +10</div>
+          <div class="team-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/babacar-rnlptv2md3awowq7clhi2z9x5l5tkn7sx1bi04tu0c.jpeg" alt="Amadou Tankari">
+        <div class="team-info">
+          <div class="role">Coordinateur Général</div>
+          <h3>Amadou Tankari</h3>
+          <div class="lic">Licence C CAF</div>
+          <div class="exp">Annee d'Exp: +16</div>
+          <div class="team-socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-x-twitter"></i></a>
+            <a href="#"><i class="fab fa-pinterest-p"></i></a>
+            <a href="#"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:38px"><a href="#" class="btn-red">Voir toute l'équipe</a></div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testi">
+  <div class="container">
+    <div class="testi-hdr">
+      <div class="section-eyebrow center">Qu'est-ce que nos joueurs & parents disent</div>
+      <h2 class="section-title">Découvrez pourquoi les parents nous font <span>si confiance</span></h2>
+      <p class="section-sub" style="margin:0 auto;max-width:560px">Chez Standard Pro-Foot, nous formons de grands joueurs, mais surtout de grands hommes.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="testi-q">"</div>
+        <p class="testi-text">Standard Pro-Foot apporte une vraie discipline aux jeunes. Depuis que mon fils a rejoint l'académie, j'ai vu une énorme évolution dans son comportement, sa confiance et sa manière de jouer. L'encadrement est sérieux et professionnel.</p>
+        <div class="testi-author">
+          <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/Gemini_Generated_Image_9omxkw9omxkw9omx-e1779046397208.png" alt="Salif">
+          <div><div class="testi-name">Salif</div><div class="testi-role">Parent</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-q">"</div>
+        <p class="testi-text">Ici, les jeunes rêvent plus grand. L'académie donne aux joueurs l'envie de croire en leur potentiel et de viser une carrière dans le football professionnel.</p>
+        <div class="testi-author">
+          <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/Gemini_Generated_Image_3epssd3epssd3eps-e1779047145739.png" alt="Jackline">
+          <div><div class="testi-name">Jackline</div><div class="testi-role">Parent</div></div>
+        </div>
+      </div>
+      <div class="testi-card">
+        <div class="testi-q">"</div>
+        <p class="testi-text">Une académie ambitieuse avec une vraie vision. Standard Pro-Foot ne forme pas seulement des footballeurs. L'académie transmet des valeurs fortes comme le respect, le travail et l'esprit d'équipe.</p>
+        <div class="testi-author">
+          <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/babacar.jpeg" alt="Babacar">
+          <div><div class="testi-name">Babacar</div><div class="testi-role">Coach</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MATCHES -->
+<section class="matches">
+  <div class="container">
+    <div class="matches-hdr">
+      <div>
+        <div class="section-eyebrow">Latest Match Updates</div>
+        <h2 class="section-title">Match scores, stats <span>& highlights</span></h2>
+      </div>
+      <a href="#" class="btn-red">See More</a>
+    </div>
+    <div class="match-list">
+      <div class="match-item">
+        <div class="match-date"><span class="time">1:00 AM</span><span class="day">19 AUG</span></div>
+        <div class="match-team">
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+          <h4>Liverpool FC</h4>
+        </div>
+        <div class="match-vs">VS</div>
+        <div class="match-team right">
+          <h4>Chelsea FC</h4>
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+        </div>
+        <div class="match-badge"><span>À venir</span></div>
+      </div>
+      <div class="match-item">
+        <div class="match-date"><span class="time">5:00 AM</span><span class="day">05 AUG</span></div>
+        <div class="match-team">
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+          <h4>Sevilla FC</h4>
+        </div>
+        <div class="match-vs">VS</div>
+        <div class="match-team right">
+          <h4>Chelsea FC</h4>
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+        </div>
+        <div class="match-badge"><span>À venir</span></div>
+      </div>
+      <div class="match-item">
+        <div class="match-date"><span class="time">4:00 AM</span><span class="day">29 AUG</span></div>
+        <div class="match-team">
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+          <h4>Liverpool FC</h4>
+        </div>
+        <div class="match-vs">VS</div>
+        <div class="match-team right">
+          <h4>Chelsea FC</h4>
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+        </div>
+        <div class="match-badge"><span>À venir</span></div>
+      </div>
+      <div class="match-item">
+        <div class="match-date"><span class="time">3:00 AM</span><span class="day">20 AUG</span></div>
+        <div class="match-team">
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+          <h4>Liverpool FC</h4>
+        </div>
+        <div class="match-vs">VS</div>
+        <div class="match-team right">
+          <h4>AC Milan</h4>
+          <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/logo-rmi9tr5vlncx0725mwr6qq2mlx182qaawlxcc1orjo.png" alt="logo">
+        </div>
+        <div class="match-badge"><span>À venir</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:46px">
+      <div class="section-eyebrow center">FAQ's</div>
+      <h2 class="section-title">Vous avez des Questions ? <span>On a les Réponses !</span></h2>
+    </div>
+    <div class="faq-grid">
+      <div class="faq-cta">
+        <h3>Besoin d'aide pour nous rejoindre ?</h3>
+        <p>Notre équipe est disponible pour répondre à toutes vos questions concernant l'intégration de l'académie.</p>
+        <a href="#" class="btn-white">Contactez-Nous</a>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item open">
+          <div class="faq-q" onclick="toggleFaq(this)">Qu'est-ce que Standard Pro-Foot Académie ? <i class="fas fa-plus"></i></div>
+          <div class="faq-a">Standard Pro-Foot Académie est une académie dédiée à la formation et à l'accompagnement des jeunes talents du football, avec une approche basée sur la discipline, l'éducation, le travail collectif et le développement personnel.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">L'académie est-elle payante ? <i class="fas fa-plus"></i></div>
+          <div class="faq-a">Non. Notre activité phare est entièrement gratuite. Les jeunes joueurs sélectionnés à travers nos camps de détection peuvent intégrer le programme sans frais de formation.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Comment intégrer l'académie ? <i class="fas fa-plus"></i></div>
+          <div class="faq-a">L'entrée se fait principalement via nos camps de détection. Les joueurs sont observés sur : technique, intelligence de jeu, discipline, motivation et potentiel de progression.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">À partir de quel âge peut-on participer ? <i class="fas fa-plus"></i></div>
+          <div class="faq-a">Les camps sont ouverts aux jeunes joueurs selon les catégories annoncées lors de chaque session de détection.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-q" onclick="toggleFaq(this)">Que se passe-t-il après une sélection ? <i class="fas fa-plus"></i></div>
+          <div class="faq-a">Les joueurs retenus intègrent progressivement le programme avec :<ul><li>Entraînements structurés</li><li>Suivi sportif</li><li>Encadrement éducatif</li><li>Développement physique et mental</li><li>Participation à des compétitions</li></ul></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWS -->
+<section class="news">
+  <div class="container">
+    <div class="news-hdr">
+      <div class="section-eyebrow center">Les dernières nouvelles</div>
+      <h2 class="section-title">Suivez l'actualité du club, <span>des joueurs et les scores</span></h2>
+      <p class="section-sub" style="margin:0 auto;max-width:560px">Suivez notre quotidien vers notre ambition de devenir une académie de référence en Afrique.</p>
+    </div>
+    <div class="news-grid">
+      <div class="news-card">
+        <img src="https://standardpro-foot.com/wp-content/uploads/2026/04/Gemini_Generated_Image_ck5yjlck5yjlck5y.png" alt="News">
+        <div class="news-body">
+          <span class="news-tag">Actualité</span>
+          <h3>Standard Pro-Foot Académie ouvre ses portes à Niamey</h3>
+          <p>Une académie de football ambitieuse au cœur de Niamey. Standard Pro-Foot Académie annonce officiellement l'ouverture...</p>
+          <a href="#">Lire Plus →</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/littleboyfootball-637x1024.webp" alt="News 2" style="object-position:center top">
+        <div class="news-body">
+          <span class="news-tag">Détection</span>
+          <h3>Camp de détection : des jeunes talents évalués</h3>
+          <p>Un camp de détection exceptionnel qui a permis d'identifier les futurs talents de l'académie Standard Pro-Foot...</p>
+          <a href="#">Lire Plus →</a>
+        </div>
+      </div>
+      <div class="news-card">
+        <img src="https://standardpro-foot.com/wp-content/uploads/elementor/thumbs/ChatGPT-Image-12-mai-2026-00_57_59-rnbqr79qwd6rmxrg64n3qcjy6gtbapy2lsuz74xhzs.png" alt="News 3">
+        <div class="news-body">
+          <span class="news-tag">Équipe</span>
+          <h3>Notre staff technique prêt pour la nouvelle saison</h3>
+          <p>Le staff technique de Standard Pro-Foot se prépare activement pour accompagner les jeunes joueurs vers l'excellence...</p>
+          <a href="#">Lire Plus →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact">
+  <div class="container">
+    <div style="text-align:center;margin-bottom:46px">
+      <div class="section-eyebrow center">Contactez-nous</div>
+      <h2 class="section-title">Rentrez en contact avec <span>notre équipe</span></h2>
+      <p class="section-sub" style="margin:0 auto;max-width:560px">Vous souhaitez nouer un partenariat, vous êtes parent ou jeune footballeur ? Remplissez ce formulaire, vous obtiendrez une réponse dans un temps record.</p>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Téléphone</h3>
+        <p>+1 (555) 123-4567</p>
+        <h3>Email</h3>
+        <p>info@yourdomain.com</p>
+        <h3>Adresse</h3>
+        <p>1234 Niamey, Niger</p>
+        <div class="soc-row">
+          <h4>Suivez-nous sur les réseaux</h4>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-x-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div style="margin-top:32px;display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div style="background:#1a1a1a;padding:22px;text-align:center;border-top:3px solid var(--red)">
+            <div style="font-family:'Oswald',sans-serif;font-size:40px;color:var(--red)">15</div>
+            <div style="font-size:10px;letter-spacing:2px;color:#555;text-transform:uppercase">Championnats</div>
+          </div>
+          <div style="background:#1a1a1a;padding:22px;text-align:center;border-top:3px solid var(--red)">
+            <div style="font-family:'Oswald',sans-serif;font-size:40px;color:var(--red)">28</div>
+            <div style="font-size:10px;letter-spacing:2px;color:#555;text-transform:uppercase">Coupes</div>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form">
+        <input type="text" placeholder="Votre Nom Complet">
+        <input type="email" placeholder="Votre Email">
+        <input type="tel" placeholder="Votre Téléphone">
+        <textarea placeholder="Votre Message..."></textarea>
+        <button type="button">Envoyer le Message</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+  <div class="newsletter-inner">
+    <h3>Souscrivez à notre Newsletter</h3>
+    <div class="nl-form">
+      <input type="email" placeholder="Votre adresse email...">
+      <button>S'abonner</button>
+    </div>
+  </div>
+</div>
+
+<!-- PARTNERS -->
+<div class="partners">
+  <h4>Nos Partenaires</h4>
+  <div class="partners-logos">
+    <div class="partner-logo">
+      <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/ChatGPT_Image_30_avr._2026__20_43_24-removebg-preview-300x300.png" alt="Partenaire 1">
+    </div>
+    <div class="partner-logo">
+      <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/ChatGPT_Image_30_avr._2026__20_43_24-removebg-preview-300x300.png" alt="Partenaire 2">
+    </div>
+    <div class="partner-logo">
+      <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/ChatGPT_Image_30_avr._2026__20_43_24-removebg-preview-300x300.png" alt="Partenaire 3">
+    </div>
+    <div class="partner-logo">
+      <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/ChatGPT_Image_30_avr._2026__20_43_24-removebg-preview-300x300.png" alt="Partenaire 4">
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:10px">
+        <img src="https://standardpro-foot.com/wp-content/uploads/2026/05/ChatGPT_Image_30_avr._2026__20_43_24-removebg-preview-300x300.png" alt="Logo" style="width:48px;height:48px;object-fit:contain">
+        <div style="font-family:'Oswald',sans-serif;font-size:16px;color:#fff">STANDARD <span style="color:var(--red)">PRO-FOOT</span></div>
+      </div>
+      <p>la discipline, l'excellence et la passion au service du football moderne. Une académie de référence en Afrique de l'Ouest.</p>
+      <div class="footer-soc">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-x-twitter"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-telegram-plane"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4>Nos Programmes</h4>
+      <ul>
+        <li><a href="#">Programmes d'entraînement structurés</a></li>
+        <li><a href="#">Détection vers le football pro</a></li>
+        <li><a href="#">Participation aux tournois</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Liens Rapides</h4>
+      <ul>
+        <li><a href="#">Accueil</a></li>
+        <li><a href="#">Programmes</a></li>
+        <li><a href="#">Calendrier</a></li>
+        <li><a href="#">Actualité</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Nos Informations</h4>
+      <ul>
+        <li><a href="#">(+ 221) 77 123 45 67</a></li>
+        <li><a href="#">33 867 77 77</a></li>
+        <li><a href="#">contact@standardpro-foot.com</a></li>
+        <li><a href="#">www.standardpro-foot.com</a></li>
+        <li><a href="#">Niamey, CA 90001, Niger</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2025 Standard Pro-foot Academy. All rights reserved. Do with ❤️ by <a href="https://clixlab.co/">Clixlab</a>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(el){
+  const item=el.parentElement;
+  document.querySelectorAll('.faq-item').forEach(i=>{if(i!==item)i.classList.remove('open')});
+  item.classList.toggle('open');
+}
+function animateCounters(){
+  document.querySelectorAll('.counter').forEach(el=>{
+    const target=parseInt(el.dataset.target);
+    let cur=0;
+    const step=Math.ceil(target/60);
+    const iv=setInterval(()=>{
+      cur=Math.min(cur+step,target);
+      el.textContent=cur+'+';
+      if(cur>=target)clearInterval(iv);
+    },30);
+  });
+}
+const sb=document.querySelector('.stats-bar');
+if(sb){
+  const obs=new IntersectionObserver(e=>{if(e[0].isIntersecting){animateCounters();obs.disconnect();}},{threshold:.5});
+  obs.observe(sb);
+}
+</script>
+</body>
+</html>
+HTMLEOF
+echo "Done"
+</body>
+</html>
